@@ -5,10 +5,19 @@ class GitDrip < Formula
   version "0.1.0"
   sha256 "b63c3d3e008387363cbd2a89976ce5731712beefcc9c424864ab9b896510d818"
 
+  resource "completion" do
+    url "https://github.com/jbarone/git-drip-completion.git", :branch => "master"
+  end
+
 
   def install
     system "make", "prefix=#{libexec}", "install"
     bin.write_exec_script libexec/"bin/git-drip"
+
+    resource("completion").stage do
+      bash_completion.install "git-drip-completion.bash"
+      zsh_completion.install "git-drip-completion.zsh"
+    end
   end
 
   test do
