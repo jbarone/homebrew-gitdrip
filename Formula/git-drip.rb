@@ -3,7 +3,7 @@ class GitDrip < Formula
   homepage "https://github.com/jbarone/gitdrip"
   url "https://github.com/jbarone/gitdrip/archive/v0.2.0.tar.gz"
   version "0.1.0"
-  sha256 "b856d07b951901dc31054ebe7bc4b29301787bba99b224fe9c2cc9c561b2b489"
+  sha256 "b63c3d3e008387363cbd2a89976ce5731712beefcc9c424864ab9b896510d818"
 
   resource "completion" do
     url "https://github.com/jbarone/git-drip-completion.git", :branch => "master"
