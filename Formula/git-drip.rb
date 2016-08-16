@@ -1,14 +1,12 @@
 class GitDrip < Formula
-  desc "A collection of Git extensions to provide high-level repository operations for the git-drip workflow"
+  desc "Collection of Git extensions to provide operations for the git-drip workflow"
   homepage "https://github.com/jbarone/gitdrip"
   url "https://github.com/jbarone/gitdrip/archive/v0.2.0.tar.gz"
-  version "0.2.0"
   sha256 "b856d07b951901dc31054ebe7bc4b29301787bba99b224fe9c2cc9c561b2b489"
 
   resource "completion" do
     url "https://github.com/jbarone/git-drip-completion.git", :branch => "master"
   end
-
 
   def install
     system "make", "prefix=#{libexec}", "install"
