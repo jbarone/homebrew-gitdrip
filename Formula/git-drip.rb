@@ -1,8 +1,9 @@
 class GitDrip < Formula
   desc "Collection of Git extensions to provide operations for the git-drip workflow"
   homepage "https://github.com/jbarone/gitdrip"
-  url "https://github.com/jbarone/gitdrip/archive/v0.2.0.tar.gz"
-  sha256 "b856d07b951901dc31054ebe7bc4b29301787bba99b224fe9c2cc9c561b2b489"
+  url "https://github.com/jbarone/gitdrip.git",
+    :tag => "v0.3.0",
+    :revision => "e8074fbda0ac48f9d84903c949b09ce415896713"
 
   resource "completion" do
     url "https://github.com/jbarone/git-drip-completion.git", :branch => "master"
